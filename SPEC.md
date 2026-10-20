@@ -5,7 +5,7 @@ Maquetar con HTML y CSS las 5 pantallas del flujo de compra de entradas,
 en versión móvil y web, iguales al diseño de Figma.
 
 ## Diseño
-Figma: https://www.figma.com/design/r3YZG630IjrAFYequXHPDO/TicketYa
+Figma: https://www.figma.com/design/r3YZG630IjrAFYequXHPDO/TicketYa?node-id=1-2&t=VIlGbfQKQwBpIBXv-1
 Páginas: guia de estilo, mockups movil, mockups desktop y diagrama de flujo.
 
 ## Pantallas
