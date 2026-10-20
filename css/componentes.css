@@ -1,0 +1,338 @@
+/* TicketYa · componentes compartidos.
+   Todos los valores salen de las variables de tokens.css. */
+
+/* ---------- Botón ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 14px var(--space-5);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-m);
+  background: var(--brand-primary);
+  color: var(--neutral-0);
+  font-size: var(--button-size);
+  line-height: var(--button-line);
+  font-weight: var(--font-semibold);
+  text-align: center;
+}
+
+.btn:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--brand-primary-dark);
+}
+
+.btn:active:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--brand-primary-dark);
+}
+
+.btn--secundario {
+  background: var(--brand-primary-light);
+  color: var(--brand-primary);
+}
+
+.btn--secundario:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--brand-primary-light);
+  color: var(--brand-primary-dark);
+}
+
+.btn--contorno {
+  background: transparent;
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.btn--contorno:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--brand-primary-light);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  background: var(--neutral-200);
+  color: var(--neutral-500);
+  cursor: not-allowed;
+}
+
+.btn--secundario:disabled,
+.btn--secundario[aria-disabled="true"] {
+  background: var(--neutral-100);
+  color: var(--neutral-300);
+}
+
+.btn--contorno:disabled,
+.btn--contorno[aria-disabled="true"] {
+  background: transparent;
+  border-color: var(--neutral-300);
+  color: var(--neutral-300);
+}
+
+.btn--bloque {
+  display: flex;
+  width: 100%;
+}
+
+/* ---------- Chip de categoría ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-pill);
+  background: var(--neutral-0);
+  color: var(--neutral-700);
+  font-size: var(--body-strong-size);
+  line-height: var(--body-strong-line);
+  font-weight: var(--font-semibold);
+}
+
+.chip:hover {
+  border-color: var(--brand-primary);
+}
+
+.chip[aria-pressed="true"],
+.chip--seleccionado {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: var(--neutral-0);
+}
+
+/* ---------- Campo de texto ---------- */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.campo__etiqueta {
+  color: var(--neutral-700);
+  font-size: var(--body-strong-size);
+  line-height: var(--body-strong-line);
+  font-weight: var(--font-semibold);
+}
+
+.campo__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-m);
+  background: var(--neutral-0);
+  color: var(--neutral-900);
+  font-size: var(--body-large-size);
+  line-height: var(--body-large-line);
+}
+
+.campo__input::placeholder {
+  color: var(--neutral-500);
+}
+
+/* El borde pasa de 1 a 2 px sin mover el contenido */
+.campo__input:focus {
+  padding: 11px 15px;
+  border: 2px solid var(--brand-primary);
+  outline: none;
+}
+
+.campo--error .campo__input {
+  padding: 11px 15px;
+  border: 2px solid var(--feedback-error);
+}
+
+.campo__ayuda {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--feedback-error);
+  font-size: var(--caption-size);
+  line-height: var(--caption-line);
+  font-weight: var(--font-medium);
+}
+
+/* ---------- Insignia ---------- */
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--brand-primary-light);
+  color: var(--brand-primary);
+  font-size: var(--caption-size);
+  line-height: var(--caption-line);
+  font-weight: var(--font-medium);
+  white-space: nowrap;
+}
+
+.insignia--exito {
+  background: var(--feedback-success-light);
+  color: var(--feedback-success);
+}
+
+.insignia--aviso {
+  background: var(--feedback-warning-light);
+  color: var(--feedback-warning);
+}
+
+.insignia--error {
+  background: var(--feedback-error-light);
+  color: var(--feedback-error);
+}
+
+/* ---------- Tarjeta de evento ---------- */
+.tarjeta-evento {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-l);
+  background: var(--neutral-0);
+  box-shadow: var(--shadow-card);
+}
+
+.tarjeta-evento__imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  background: var(--brand-primary);
+  color: var(--neutral-0);
+}
+
+.tarjeta-evento__imagen img {
+  width: 56px;
+  height: 56px;
+}
+
+.tarjeta-evento__imagen--coral {
+  background: var(--brand-accent);
+}
+
+.tarjeta-evento__imagen--oscuro {
+  background: var(--brand-primary-dark);
+}
+
+.tarjeta-evento__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.tarjeta-evento__titulo {
+  color: var(--neutral-900);
+  font-size: var(--heading-2-size);
+  line-height: var(--heading-2-line);
+  font-weight: var(--font-semibold);
+}
+
+.tarjeta-evento__dato {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--neutral-500);
+  font-size: var(--body-medium-size);
+  line-height: var(--body-medium-line);
+}
+
+.tarjeta-evento__dato img {
+  width: 16px;
+  height: 16px;
+}
+
+.tarjeta-evento__precio {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-1);
+  color: var(--neutral-500);
+  font-size: var(--caption-size);
+  line-height: var(--caption-line);
+  font-weight: var(--font-medium);
+}
+
+.tarjeta-evento__monto {
+  color: var(--brand-accent);
+  font-size: var(--price-size);
+  line-height: var(--price-line);
+  font-weight: var(--font-bold);
+}
+
+/* ---------- Tarjeta de zona ---------- */
+.tarjeta-zona {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-l);
+  background: var(--neutral-0);
+}
+
+.tarjeta-zona__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.tarjeta-zona__nombre {
+  color: var(--neutral-900);
+  font-size: var(--heading-3-size);
+  line-height: var(--heading-3-line);
+  font-weight: var(--font-semibold);
+}
+
+.tarjeta-zona__detalle {
+  color: var(--neutral-500);
+  font-size: var(--body-medium-size);
+  line-height: var(--body-medium-line);
+}
+
+.tarjeta-zona__derecha {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.tarjeta-zona__precio {
+  color: var(--neutral-900);
+  font-size: var(--price-size);
+  line-height: var(--price-line);
+  font-weight: var(--font-bold);
+}
+
+.tarjeta-zona__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--brand-primary);
+}
+
+.tarjeta-zona__check img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Seleccionada: el borde pasa a 2 px sin mover el contenido */
+.tarjeta-zona--seleccionada {
+  padding: 15px;
+  border: 2px solid var(--brand-primary);
+  background: var(--brand-primary-light);
+}
+
+.tarjeta-zona--seleccionada .tarjeta-zona__precio {
+  color: var(--brand-primary);
+}
+
+.tarjeta-zona--agotada {
+  border-color: var(--neutral-200);
+  background: var(--neutral-100);
+  cursor: not-allowed;
+}
+
+.tarjeta-zona--agotada .tarjeta-zona__nombre,
+.tarjeta-zona--agotada .tarjeta-zona__detalle {
+  color: var(--neutral-500);
+}
