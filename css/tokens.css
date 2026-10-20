@@ -1,0 +1,156 @@
+/* TicketYa · tokens del style guide de Figma.
+   Los nombres siguen las variables de Figma; "/" pasa a "-"
+   (brand/primary -> --brand-primary, space/4 -> --space-4). */
+
+:root {
+  /* Colores · Marca */
+  --brand-primary: #5b2ee0;
+  --brand-primary-dark: #4020b5;
+  --brand-primary-light: #ede7ff;
+  --brand-accent: #ff6b4a;
+  --brand-accent-light: #ffe9e3;
+
+  /* Colores · Neutros */
+  --neutral-900: #17172b;
+  --neutral-700: #3d3d56;
+  --neutral-500: #6b6b85;
+  --neutral-300: #c9c9d9;
+  --neutral-200: #e4e4ee;
+  --neutral-100: #f3f2f9;
+  --neutral-0: #ffffff;
+
+  /* Colores · Retroalimentación */
+  --feedback-success: #12a150;
+  --feedback-success-light: #e3f6ea;
+  --feedback-error: #d92d3a;
+  --feedback-error-light: #fde8ea;
+  --feedback-warning: #b7791f;
+  --feedback-warning-light: #fef3d7;
+
+  /* Tipografía · familia y pesos */
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Tipografía · tamaño / interlineado de cada estilo */
+  --display-size: 32px;
+  --display-line: 40px;
+  --heading-1-size: 24px;
+  --heading-1-line: 32px;
+  --heading-2-size: 20px;
+  --heading-2-line: 28px;
+  --heading-3-size: 16px;
+  --heading-3-line: 24px;
+  --body-large-size: 16px;
+  --body-large-line: 24px;
+  --body-medium-size: 14px;
+  --body-medium-line: 20px;
+  --body-strong-size: 14px;
+  --body-strong-line: 20px;
+  --caption-size: 12px;
+  --caption-line: 16px;
+  --button-size: 16px;
+  --button-line: 24px;
+  --price-size: 20px;
+  --price-line: 28px;
+
+  /* Espaciado (escala de 4 px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Radios */
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-pill: 999px;
+
+  /* Sombras */
+  --shadow-card: 0 2px 8px rgba(23, 23, 43, 0.08);
+  --shadow-elevated: 0 8px 24px rgba(23, 23, 43, 0.16);
+}
+
+/* Estilos base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--neutral-100);
+  color: var(--neutral-900);
+  font-family: var(--font-family);
+  font-size: var(--body-large-size);
+  line-height: var(--body-large-line);
+  font-weight: var(--font-regular);
+}
+
+h1, h2, h3, p, ul, ol, figure {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--heading-1-size);
+  line-height: var(--heading-1-line);
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: var(--heading-2-size);
+  line-height: var(--heading-2-line);
+  font-weight: var(--font-semibold);
+}
+
+h3 {
+  font-size: var(--heading-3-size);
+  line-height: var(--heading-3-line);
+  font-weight: var(--font-semibold);
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: var(--display-size);
+    line-height: var(--display-line);
+  }
+}
