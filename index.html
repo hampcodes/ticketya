@@ -1,12 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos · TicketYa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/eventos.css">
 </head>
 <body>
-    
-</body>
+  <header class="cabecera">
+    <div class="cabecera__interno">
+      <a class="marca" href="index.html">
+        <span class="marca__logo"><img src="img/icon-ticket-blanco.svg" alt="" width="20" height="20"></span>
+        <span class="marca__nombre">TicketYa</span>
+      </a>
+      <nav class="cabecera__enlaces" aria-label="Principal">
+        <a class="cabecera__enlace cabecera__enlace--activo" href="index.html" aria-current="page">Eventos</a>
+        <a class="cabecera__enlace" href="#">Mis entradas</a>
+        <a class="cabecera__enlace" href="#">Ayuda</a>
+      </nav>
+      <div class="cabecera__acciones">
+        <p class="ciudad">
+          <img src="img/icon-pin-marca.svg" alt="" width="16" height="16">
+          <span>Lima</span>
+        </p>
+        <a class="btn btn--secundario cabecera__cuenta" href="#">Mi cuenta</a>
+      </div>
+    </div>
+  </header>
 
+  <main class="principal">
+    <section class="banner" aria-labelledby="titulo-pagina">
+      <h1 class="banner__titulo" id="titulo-pagina">Vive tus eventos favoritos</h1>
+      <p class="banner__texto">Conciertos, teatro y deportes. Compra tus entradas en menos de 2 minutos.</p>
+      <form class="buscador" role="search" action="#">
+        <label class="solo-lector" for="buscar">Buscar eventos, artistas o lugares</label>
+        <img class="buscador__icono" src="img/icon-search.svg" alt="" width="20" height="20">
+        <input class="buscador__input" id="buscar" type="search" name="q" placeholder="Buscar eventos, artistas o lugares">
+      </form>
+    </section>
+
+    <section class="categorias" aria-label="Categorías">
+      <button class="chip" type="button" aria-pressed="true">Todos</button>
+      <button class="chip" type="button" aria-pressed="false">Música</button>
+      <button class="chip" type="button" aria-pressed="false">Teatro</button>
+      <button class="chip" type="button" aria-pressed="false">Deportes</button>
+      <button class="chip categorias__solo-web" type="button" aria-pressed="false">Festivales</button>
+    </section>
+
+    <section class="proximos" aria-labelledby="titulo-proximos">
+      <h2 class="proximos__titulo" id="titulo-proximos">Próximos eventos</h2>
+      <ul class="lista-eventos">
+        <li>
+          <a class="tarjeta-evento" href="evento.html">
+            <div class="tarjeta-evento__imagen">
+              <img src="img/icon-ticket-blanco.svg" alt="" width="56" height="56">
+            </div>
+            <div class="tarjeta-evento__contenido">
+              <span class="insignia">Últimas entradas</span>
+              <h3 class="tarjeta-evento__titulo">Noche Andina Fest</h3>
+              <p class="tarjeta-evento__dato"><img src="img/icon-calendar.svg" alt="" width="16" height="16">Sáb 14 dic · 8:00 p. m.</p>
+              <p class="tarjeta-evento__dato"><img src="img/icon-pin.svg" alt="" width="16" height="16">Estadio Nacional, Lima</p>
+              <p class="tarjeta-evento__precio">Desde <span class="tarjeta-evento__monto">S/ 80.00</span></p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="tarjeta-evento" href="evento.html">
+            <div class="tarjeta-evento__imagen tarjeta-evento__imagen--coral">
+              <img src="img/icon-ticket-blanco.svg" alt="" width="56" height="56">
+            </div>
+            <div class="tarjeta-evento__contenido">
+              <span class="insignia">Teatro</span>
+              <h3 class="tarjeta-evento__titulo">Stand Up Lima</h3>
+              <p class="tarjeta-evento__dato"><img src="img/icon-calendar.svg" alt="" width="16" height="16">Vie 6 dic · 9:00 p. m.</p>
+              <p class="tarjeta-evento__dato"><img src="img/icon-pin.svg" alt="" width="16" height="16">Teatro Municipal, Lima</p>
+              <p class="tarjeta-evento__precio">Desde <span class="tarjeta-evento__monto">S/ 60.00</span></p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="tarjeta-evento" href="evento.html">
+            <div class="tarjeta-evento__imagen tarjeta-evento__imagen--oscuro">
+              <img src="img/icon-ticket-blanco.svg" alt="" width="56" height="56">
+            </div>
+            <div class="tarjeta-evento__contenido">
+              <span class="insignia">Deportes</span>
+              <h3 class="tarjeta-evento__titulo">Final Liga 1</h3>
+              <p class="tarjeta-evento__dato"><img src="img/icon-calendar.svg" alt="" width="16" height="16">Dom 8 dic · 3:30 p. m.</p>
+              <p class="tarjeta-evento__dato"><img src="img/icon-pin.svg" alt="" width="16" height="16">Estadio Villanueva, Lima</p>
+              <p class="tarjeta-evento__precio">Desde <span class="tarjeta-evento__monto">S/ 50.00</span></p>
+            </div>
+          </a>
+        </li>
+        <li class="lista-eventos__solo-web">
+          <a class="tarjeta-evento" href="evento.html">
+            <div class="tarjeta-evento__imagen tarjeta-evento__imagen--oscuro">
+              <img src="img/icon-ticket-blanco.svg" alt="" width="56" height="56">
+            </div>
+            <div class="tarjeta-evento__contenido">
+              <span class="insignia">Música</span>
+              <h3 class="tarjeta-evento__titulo">Orquesta Sinfónica</h3>
+              <p class="tarjeta-evento__dato"><img src="img/icon-calendar.svg" alt="" width="16" height="16">Jue 12 dic · 7:30 p. m.</p>
+              <p class="tarjeta-evento__dato"><img src="img/icon-pin.svg" alt="" width="16" height="16">Gran Teatro Nacional, Lima</p>
+              <p class="tarjeta-evento__precio">Desde <span class="tarjeta-evento__monto">S/ 70.00</span></p>
+            </div>
+          </a>
+        </li>
+        <li class="lista-eventos__solo-web">
+          <a class="tarjeta-evento" href="evento.html">
+            <div class="tarjeta-evento__imagen">
+              <img src="img/icon-ticket-blanco.svg" alt="" width="56" height="56">
+            </div>
+            <div class="tarjeta-evento__contenido">
+              <span class="insignia">Festivales</span>
+              <h3 class="tarjeta-evento__titulo">Festival de Jazz</h3>
+              <p class="tarjeta-evento__dato"><img src="img/icon-calendar.svg" alt="" width="16" height="16">Sáb 21 dic · 5:00 p. m.</p>
+              <p class="tarjeta-evento__dato"><img src="img/icon-pin.svg" alt="" width="16" height="16">Parque de la Exposición, Lima</p>
+              <p class="tarjeta-evento__precio">Desde <span class="tarjeta-evento__monto">S/ 90.00</span></p>
+            </div>
+          </a>
+        </li>
+        <li class="lista-eventos__solo-web">
+          <a class="tarjeta-evento" href="evento.html">
+            <div class="tarjeta-evento__imagen tarjeta-evento__imagen--coral">
+              <img src="img/icon-ticket-blanco.svg" alt="" width="56" height="56">
+            </div>
+            <div class="tarjeta-evento__contenido">
+              <span class="insignia">Teatro</span>
+              <h3 class="tarjeta-evento__titulo">La Casa de Bernarda</h3>
+              <p class="tarjeta-evento__dato"><img src="img/icon-calendar.svg" alt="" width="16" height="16">Vie 27 dic · 8:00 p. m.</p>
+              <p class="tarjeta-evento__dato"><img src="img/icon-pin.svg" alt="" width="16" height="16">Teatro Segura, Lima</p>
+              <p class="tarjeta-evento__precio">Desde <span class="tarjeta-evento__monto">S/ 55.00</span></p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="barra-inferior" aria-label="Secciones">
+    <a class="barra-inferior__item barra-inferior__item--activo" href="index.html" aria-current="page">
+      <img src="img/icon-home-activo.svg" alt="" width="24" height="24">
+      <span>Eventos</span>
+    </a>
+    <a class="barra-inferior__item" href="#">
+      <img src="img/icon-ticket.svg" alt="" width="24" height="24">
+      <span>Entradas</span>
+    </a>
+    <a class="barra-inferior__item" href="#">
+      <img src="img/icon-user.svg" alt="" width="24" height="24">
+      <span>Perfil</span>
+    </a>
+  </nav>
+
+  <footer class="pie">
+    <div class="pie__interno">
+      <p class="pie__marca">TicketYa</p>
+      <p class="pie__texto">Compra de entradas simple, rápida y segura · Ayuda · Términos · Privacidad</p>
+    </div>
+  </footer>
+</body>
 </html>
